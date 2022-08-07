@@ -12,7 +12,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*.{ts,js}": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
